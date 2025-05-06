@@ -68,3 +68,71 @@ header {
         padding-right: 1rem;
     }
 }
+
+
+#sobre-mi {
+    padding: 4rem 1rem;
+  }
+  .sobre-mi-grid {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .foto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .texto p,
+  .texto ul {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .tecnologias {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 0.5rem 1rem;
+  }
+  .tecnologias li::before {
+    content: "• ";
+    color: #007acc;
+  }
+  .botones {
+    display: flex;
+    gap: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border: 2px solid #007acc;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .btn:hover {
+    background: rgba(0, 122, 204, 0.1);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 700px) {
+    .sobre-mi-grid {
+      flex-direction: column;
+      text-align: center;
+    }
+    .foto img {
+      width: 180px;
+      height: 180px;
+    }
+    .botones {
+      justify-content: center;
+    }
+  }
