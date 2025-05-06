@@ -6,77 +6,7 @@
     <title>Angelo Graterol</title>
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="stylesheet" href="/Style/fonts.css">
-    <style>
-        :root {
-    --color-principal: #385f5b;
-    --color-fondo-claro: #f2f4f3;
-    --color-fondo-oscuro: #1e1e1e;
-    --color-texto-primario: #222222;
-    --color-texto-secundario: #6c757d;
-    --color-acento: #00b4d8;
-}
 
-header {
-    background-color: var(--color-fondo-oscuro);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
-}
-
-.logo a img {
-    height: 75px;
-    transition: transform 0.3s ease;
-}
-
-.logo a img:hover {
-    transform: scale(1.05);
-}
-
-.menu-list {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-list li:not(:last-child) {
-    border-right: 1px solid rgba(204, 204, 204, 0.3);
-    padding-right: 1.5rem;
-}
-
-.menu-list a {
-    color: var(--color-fondo-claro);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 400;
-    transition: all 0.3s ease;
-}
-
-.menu-list a:hover {
-    color: var(--color-acento);
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .logo a img {
-        height: 50px;
-    }
-    .menu-list {
-        gap: 1rem;
-    }
-    .menu-list li:not(:last-child) {
-        padding-right: 1rem;
-    }
-}
-    </style>
 </head>
 <body>
 
@@ -84,47 +14,40 @@ header {
         <div class="logo">
             <a href="#"><img src="/Images/logo.png" alt="logo de portafolio"></a>
         </div>
+        <a href="index.html"><h2>Angelo Graterol</h2></a>
+
         <div>
-            <nav class="menu">
-                <ul class="menu-list"> 
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre mí</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Habilidades</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
+            <a href=""><img src="" alt="Instagram"></a>
+            <a href=""><img src="" alt="GitHub"></a>
+            <a href=""><img src="" alt="Linkedin"></a>
+            <a href=""><img src="" alt="Gmail"></a>
+        </div>
+
+        <div>
+            <a href=""><img src="" alt="Home"><h2>Home</h2></a>
+            <a href=""><img src="" alt="About"><h2>About</h2></a>
+            <a href=""><img src="" alt="Projects"><h2>Projects</h2></a>
+            <a href=""><img src="" alt="Formulario"></a>
         </div>
     </header>
 
 
-    <!-- Sección Inicio / Hero -->
-<section id="inicio" class="hero">
-    <div class="hero__container">
-      <!-- Columna Izquierda: Texto -->
-      <div class="hero__text">
-        <h1 class="hero__title">Hola, soy Angelo</h1>
-        <p class="hero__subtitle">
-          Creo experiencias digitales funcionales, intuitivas y creativas.
-        </p>
-        <a href="#proyectos" class="hero__cta">Ver Proyectos ↓</a>
-      </div>
-  
-      <!-- Columna Derecha: Imagen / Logo -->
-      <div class="hero__image">
-        <img
-          src="ruta/a/tu-logo.svg"
-          alt="Logo de Angelo"
-          loading="lazy"
-          width="400"
-          height="400"
-        />
-      </div>
-    </div>
-  </section>
-  
+ 
 
-    <!-- <section id="AboutMe">
+
+    <section id="Home">
+        <!-- Backgorund imagen de fondo -->
+        <div>
+            <h1>Angelo Graterol</h1>
+            <p>Desarrollador</p> <!-- Efecto de escribir -->
+        </div>
+
+    </section>
+
+
+
+
+    <section id="AboutMe">
         <div class="imagen">
             <img src="" alt="">
         </div>
@@ -135,25 +58,56 @@ header {
 
             
         </div>
-    </section> -->
+    </section>
+
+
 
 
     
-    <!-- <section id="Proyectos">
-
+    <section id="Proyectos">
+        
+        <div class="proyecto1">
+            <h3>Proyecto 1</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, odio provident! Aspernatur ducimus eaque soluta repellendus impedit perferendis quam beatae, debitis quisquam ea, voluptates cupiditate nemo et vel autem consequuntur?</p>
+        </div>
+        
+        <div class="proyecto2">
+            <h3>Proyecto 2</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium reprehenderit repellat nemo mollitia aut quos corporis quia, culpa officiis corrupti suscipit nulla perspiciatis dolorum libero ipsam accusamus? Ipsum, quos necessitatibus!</p>
+        </div>
+        
+        <div class="proyecto3">
+            <h3>Proyecto 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea voluptatibus impedit quod eligendi ipsa vel adipisci, minus exercitationem! Modi consequatur quos quae recusandae laudantium temporibus magni eaque porro debitis?</p>
+        </div>
+        
+        <div class="proyecto4">
+            <h3></h3>
+            <p></p>
+        </div>
     </section>
+
+
+
+
+
+
     <section id="Contacto">
         <div>
-            
+            <a href=""><img src="" alt="Instagram"></a>
+            <a href=""><img src="" alt="GitHub"></a>
+            <a href=""><img src="" alt="Linkedin"></a>
+            <a href=""><img src="" alt="Gmail"></a>
         </div>
         <div>
+            <!-- Formulario -->
             <form action="">
                 <label for=""></label>
                 <input type="text" name="" id="">
                 <input type="submit" value="">
             </form>
         </div>
-    </section> -->
+    </section>
 
 
 
@@ -168,4 +122,3 @@ header {
     </footer>
 </body>
 </html>
-
