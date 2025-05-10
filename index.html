@@ -10,34 +10,33 @@
 </head>
 <body>
 
+
+    <!-- Encabezado -->
     <header>
-        <div class="logo">
-            <a href="#"><img src="/Images/logo.png" alt="logo de portafolio"></a>
+        <div class="header__logo">
+            <a href="#"><img src="Images/logo.png" alt="logo de portafolio"></a>
         </div>
-        <a href="index.html"><h2>Angelo Graterol</h2></a>
+        <a href="index.html"><spam>Angelo Graterol</spam></a>
 
-        <div>
-            <a href=""><img src="" alt="Instagram"></a>
-            <a href=""><img src="" alt="GitHub"></a>
-            <a href=""><img src="" alt="Linkedin"></a>
-            <a href=""><img src="" alt="Gmail"></a>
+        <div class="header-redes">
+            <a href=""><img src="Images/iconos/instagram/icons8-instagram-48.svg" alt="Instagram"></a>
+            <a href=""><img src="Images/iconos/github/icons8-github-logo-48.svg" alt="GitHub"></a> 
+            <a href=""><img src="Images/iconos/linkedin/icons8-linkedin-48.svg" alt="Linkedin"></a>
+            <a href=""><img src="Images/iconos/gmail/icons8-gmail-48.svg" alt="Gmail"></a> 
         </div>
 
-        <div>
-            <a href=""><img src="" alt="Home"><h2>Home</h2></a>
-            <a href=""><img src="" alt="About"><h2>About</h2></a>
-            <a href=""><img src="" alt="Projects"><h2>Projects</h2></a>
-            <a href=""><img src="" alt="Formulario"></a>
-        </div>
+        <nav class="header-navegador">
+            <a href=""><img src="Images/iconos/home/icons8-home-20.svg" alt="Home"><spam>Home</spam></a>
+            <a href=""><img src="Images/iconos/aboutme/identity_platform_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.svg" alt="About"><spam>About</spam></a>
+            <a href=""><img src="Images/iconos/code/folder_code_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.svg" alt="Projects"><spam>Projects</spam></a>
+            <a href=""><img src="Images/iconos/contact/mark_chat_unread_20dp_1F1F1F_FILL0_wght400_GRAD0_opsz20.svg" alt="Contacto"><spam>Contacto</spam></a>
+        </nav>
     </header>
 
 
-    <section id="sobre-mi">
-        
-      </section>
-      
 
 
+    <!-- Sección de Inicio -->
     <section id="Home">
         <!-- Backgorund imagen de fondo -->
         <div>
@@ -50,75 +49,203 @@
 
 
 
+    <!-- Seccion sobre mi -->
     <section id="sobre-mi">
         <div class="sobre-mi-grid">
-          <div class="foto">
+        <div class="foto">
             <img src="ruta/tu-foto.jpg" alt="Tu nombre">
-          </div>
-          <div class="texto">
+        </div>
+        <div class="texto">
             <h2>Sobre mí</h2>
             <p>Soy estudiante de Ingeniería de Sistemas con enfoque en desarrollo web. Me apasiona construir soluciones funcionales y limpias usando tecnologías modernas.</p>
             <p>Actualmente curso el tercer semestre de Ingeniería de Sistemas y me formado como Full Stack con proyectos personales.</p>
             <ul class="tecnologias">
-              <li>HTML & CSS</li>
-              <li>JavaScript / React</li>
-              <li>Node.js & Express</li>
-              <li>MySQL & MongoDB</li>
+                <li>HTML & CSS</li>
+                <li>JavaScript / React</li>
+                <li>Node.js & Express</li>
+                <li>MySQL & MongoDB</li>
             </ul>
             <p>Proactivo, autodidacta y con atención al detalle. Disfruto el trabajo en equipo y asumir retos nuevos.</p>
             <div class="botones">
-              <a href="cv.pdf" class="btn">Descargar CV</a>
-              <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="cv.pdf" class="btn">Descargar CV</a>
+            <a href="#proyectos" class="btn">Ver proyectos</a>
             </div>
-          </div>
         </div>
-      </section>
-
-
-
-
-    
-    <section id="Proyectos">
-        
-        <div class="proyecto1">
-            <h3>Proyecto 1</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, odio provident! Aspernatur ducimus eaque soluta repellendus impedit perferendis quam beatae, debitis quisquam ea, voluptates cupiditate nemo et vel autem consequuntur?</p>
-        </div>
-        
-        <div class="proyecto2">
-            <h3>Proyecto 2</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium reprehenderit repellat nemo mollitia aut quos corporis quia, culpa officiis corrupti suscipit nulla perspiciatis dolorum libero ipsam accusamus? Ipsum, quos necessitatibus!</p>
-        </div>
-        
-        <div class="proyecto3">
-            <h3>Proyecto 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea voluptatibus impedit quod eligendi ipsa vel adipisci, minus exercitationem! Modi consequatur quos quae recusandae laudantium temporibus magni eaque porro debitis?</p>
-        </div>
-        
-        <div class="proyecto4">
-            <h3></h3>
-            <p></p>
         </div>
     </section>
 
 
 
 
+    <!-- Sección de proyectos -->
+    <section id="Proyectos">
+        
+        <h2>Proyectos</h2>
+        <div class="carrusel">
+            
+            <button class="control-carrusel control-carrusel-back" aria-label="Anterior">
+                &#10094;
+            </button>
 
-
-    <section id="Contacto">
-        <div>
-            <a href=""><img src="" alt="Instagram"></a>
-            <a href=""><img src="" alt="GitHub"></a>
-            <a href=""><img src="" alt="Linkedin"></a>
-            <a href=""><img src="" alt="Gmail"></a>
+            <div class="carrusel-contenedor">
+                <ul class="carrusel-funcional">
+                    <li class="carrusel-seccion">
+                        <div class="carrusel-seccion-fondo">
+                            <button class="carrusel-seccion-información">Ver más</button>
+                        </div>
+                    </li>
+                    <li class="carrusel-seccion">
+                        <div class="carrusel-seccion-fondo">
+                            <button class="carrusel-seccion-información">Ver más</button>
+                        </div>
+                    </li>
+                    <li class="carrusel-seccion">
+                        <div class="carrusel-seccion-fondo">
+                            <button class="carrusel-seccion-información">Ver más</button>
+                        </div>
+                    </li>
+                    <li class="carrusel-seccion">
+                        <div class="carrusel-seccion-fondo">
+                            <button class="carrusel-seccion-información">Ver más</button>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <button class="control-carrusel control-carrusel-next" aria-label="Siguiente">
+                &#10095;
+            </button>
         </div>
-        <div>
-            <!-- Formulario -->
-            <form action="">
-                <label for=""></label>
-                <input type="text" name="" id="">
-                <input type="submit" value="">
+    </section>
+
+
+
+
+    <!-- Seccion de contacto -->
+    <section id="Contacto">
+
+        <div id="informacion-contacto" class="informacion__contacto">
+            <a href=""><img src="Images/iconos/instagram/icons8-instagram-48.svg" alt="Instagram"></a>
+            <a href=""><img src="Images/iconos/github/icons8-github-logo-48.svg" alt="GitHub"></a>
+            <a href=""><img src="Images/iconos/linkedin/icons8-linkedin-48.svg" alt="Linkedin"></a>
+            <a href=""><img src="Images/iconos/gmail/icons8-gmail-48.svg" alt="Gmail"></a>
+        </div>
+
+
+        <!-- Formulario -->
+        <div id="formulario" class="formulario">
+            
+            <form class="form" action="" method="post" autocomplete="on">
+                <h3 class="form-titulo">Formulario de Contacto</h3>
+                <!-- Tipo de documento -->
+                <div class="form__group">
+                    <label class="form__label" for="tipo-documento">Tipo de documento</label>
+    
+                    <select class="form__select" name="tipo-documento" id="tipo-documento" required>
+    
+                        <option value="" disabled selected>Selecciona una opción</option>
+    
+                        <option value="cedula">Cédula de identidad</option>
+    
+                        <option value="tarjeta-identidad">Tarjeta de identidad</option>
+    
+                        <option value="cedula-extranjeria">Cédula de Extranjería</option>
+    
+                        <option value="pasaporte">Pasaporte</option>
+    
+                        <option value="ppt">Permiso de Protección Temporal</option>
+                    </select>  
+                </div>
+
+                <!-- Numero de documento -->
+                <div class="form__group">
+                    <label class="form__label" for="numero-documento">Número de Documento</label>
+
+                    <input class="form__input" id="numero-documento" name="numero-documento" type="number" maxlength="20" required>
+                </div>
+                
+
+                <!-- Nombre y Apellido-->
+                <div class="form__group">
+                    <label class="form__label" for="nombre-apellido">Nombre y Apellido</label>
+    
+                    <input class="form__input" type="text" name="nombre-apelldo" id="nombre-apellido" placeholder="Nombre y Apellido" required>
+                </div>
+
+
+                <!-- Numero de contacto o telefono -->
+                <div class="form__group">
+                    <label class="form__label" for="numero-telefono">Número de telefono</label>
+    
+                    <input class="form__input" type="number" name="numero-telefono" id="numero-telefono" required minlength="10">
+                </div>
+
+
+                <!-- Email -->
+                <div class="form__group">
+                    <label class="form__label" for="email">Correo Electronico</label>
+
+                    <input class="form__input" type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+                </div>
+
+
+                <!-- Sexo -->
+                <div class="form__group">
+                    <label class="form__label" for="sexo">Sexo</label>
+                    
+                    <select class="form__select" name="sexo" id="sexo">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Fecha de Nacimiento -->
+                <div class="form__group">
+                    <label class="form__label" for="nacimiento">Fecha de Nacimiento</label>
+    
+                    <input class="form__input" type="date" name="nacimiento" id="nacimiento" required>
+                </div>
+
+
+                <!-- Pais de Residencia -->
+                <div class="form__group">
+                    <label class="form__label" for="pais">Pais de Residencia</label>
+    
+                    <select class="form__select" name="pais" id="pais">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="españa">España</option>
+                        <option value="usa">Estados Unidos</option>
+                    </select>
+                </div>
+
+                <!-- Departamento, Estado o Region -->
+                <div class="form__group">
+                    <label class="form__label" for="region">Estado, Region o Departamento</label>
+    
+                    <input class="form__input" type="text" name="region" id="region" required>
+                </div>
+
+                <!-- Ciudad -->
+                <div class="form__group">
+                    <label class="form__label" for="ciudad">Ciudad</label>
+    
+                    <input class="form__input" type="text" name="ciudad" id="ciudad" placeholder="Bogota" required minlength="2">
+                </div>
+
+                <!-- Mensaje -->
+                <div class="form__group">
+                    <label class="form__label" for="mensaje">Deja un Mensaje</label>
+    
+                    <textarea class="form__textarea" name="mensaje" id="mensaje" placeholder="Deja tu mensaje o información relevante"></textarea>
+                </div>
+                <button type="submit" class="form__button">Enviar</button>
             </form>
         </div>
     </section>
@@ -126,14 +253,91 @@
 
 
 
+    <!-- Pie de pagina -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer__p">&copy; 2025 Angelo. Todos los derechos reservados.</p>
+            <a class="footer__enlaces" href="#contacto">Contacto</a> | <a class="footer__enlaces" href="#proyectos">Proyectos</a>
+            <p class="footer__p">Correo: aagraterolg@ufpso.edu.co</p>
 
-
-
-
-
-    <footer>
-
+            <p>Créditos de íconos:</p>
+            <ul>
+                <li>
+                    <a target="_blank" href="https://icons8.com/icon/84884/instagram">Instagram</a> icon by
+                    <a target="_blank" href="https://icons8.com">Icons8</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://icons8.com/icon/AZOZNnY73haj/github">GitHub logo</a> icon by
+                    <a target="_blank" href="https://icons8.com">Icons8</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://icons8.com/icon/Y2GfpkgYNp42/gmail">Gmail</a> icon by
+                    <a target="_blank" href="https://icons8.com">Icons8</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://icons8.com/icon/14096/home">Home</a> icon by
+                    <a target="_blank" href="https://icons8.com">Icons8</a>
+                </li>
+            </ul>
+        </div>
     </footer>
+
+
+
+
+    <!-- Ventana que contiene el modal de informacion de los proyectos -->
+    <div id="ventana-modal" class="ventana-modal" hidden>
+        <!-- Caja del modal -->
+        <div
+            id="modal"
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            data-modal
+        >
+            <!-- Boton de cerrar -->
+            <button
+                id="modal-close"
+                class="modal__close"
+                aria-label="Cerrar"
+                data-action="close-modal"
+            >
+                &times;
+            </button>
+
+            <!-- Titulo dinamico -->
+            <h3 id="modal-title" class="modal__title">
+
+            </h3>
+
+            <!-- Descripcion larga del proyecto -->
+            <p id="modal-description" class="modal__description">
+
+            </p>
+
+            <!-- Lista de tecnologias usadas -->
+            <ul id="modal-tech-list" class="modal__tech">
+                
+            </ul>
+            
+
+            <!-- Enlace al repositorio -->
+            <a 
+                id="modal-link"
+                class="modal__link"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                data-action="open-link"
+            >
+                Ver en GitHub
+            </a>
+        </div>
+    </div>
+
+
+
 </body>
 </html>
 
