@@ -39,11 +39,10 @@
     <!-- Sección de Inicio -->
     <section id="Home">
         <!-- Backgorund imagen de fondo -->
-        <div>
+        <div class="home-container">
             <h1>Angelo Graterol</h1>
-            <p>Desarrollador</p> <!-- Efecto de escribir -->
+            <p>Soy <span class="typing"></span></p> <!-- Efecto de escribir -->
         </div>
-
     </section>
 
 
@@ -124,13 +123,13 @@
 
     <!-- Seccion de contacto -->
     <section id="Contacto">
-
-        <div id="informacion-contacto" class="informacion__contacto">
-            <a href=""><img src="Images/iconos/instagram/icons8-instagram-48.svg" alt="Instagram"></a>
-            <a href=""><img src="Images/iconos/github/icons8-github-logo-48.svg" alt="GitHub"></a>
-            <a href=""><img src="Images/iconos/linkedin/icons8-linkedin-48.svg" alt="Linkedin"></a>
-            <a href=""><img src="Images/iconos/gmail/icons8-gmail-48.svg" alt="Gmail"></a>
-        </div>
+        <div class="contacto-grid">
+            <div id="informacion-contacto" class="informacion__contacto">
+                <a href=""><img src="Images/iconos/instagram/icons8-instagram-48.svg" alt="Instagram"></a>
+                <a href=""><img src="Images/iconos/github/icons8-github-logo-48.svg" alt="GitHub"></a>
+                <a href=""><img src="Images/iconos/linkedin/icons8-linkedin-48.svg" alt="Linkedin"></a>
+                <a href=""><img src="Images/iconos/gmail/icons8-gmail-48.svg" alt="Gmail"></a>
+            </div>
 
 
         <!-- Formulario -->
@@ -165,11 +164,11 @@
                     <input class="form__input" id="numero-documento" name="numero-documento" type="number" maxlength="20" required>
                 </div>
                 
-
+                
                 <!-- Nombre y Apellido-->
                 <div class="form__group">
                     <label class="form__label" for="nombre-apellido">Nombre y Apellido</label>
-    
+                    
                     <input class="form__input" type="text" name="nombre-apelldo" id="nombre-apellido" placeholder="Nombre y Apellido" required>
                 </div>
 
@@ -201,7 +200,7 @@
                         <option value="otro">Otro</option>
                     </select>
                 </div>
-
+                
                 <!-- Fecha de Nacimiento -->
                 <div class="form__group">
                     <label class="form__label" for="nacimiento">Fecha de Nacimiento</label>
@@ -251,7 +250,7 @@
     </section>
 
 
-
+    
 
     <!-- Pie de pagina -->
     <footer class="footer">
@@ -337,6 +336,38 @@
     </div>
 
 
+
+    <script>
+        const words = ['Desarrollador', 'Programador', 'Full Stack', 'Ingeniero'];
+        const typingEl = document.querySelector('.typing');
+        const TYPING_SPEED = 150;   // ms por carácter
+        const PAUSE_AFTER = 2000;   // ms tras completar palabra
+      
+        let wordIndex = 0, charIndex = 0;
+        let typing = true;
+      
+        function tick() {
+          const current = words[wordIndex];
+          if (typing) {
+            typingEl.textContent = current.slice(0, ++charIndex);
+            if (charIndex === current.length) {
+              typing = false;
+              setTimeout(tick, PAUSE_AFTER);
+              return;
+            }
+          } else {
+            typingEl.textContent = current.slice(0, --charIndex);
+            if (charIndex === 0) {
+              typing = true;
+              wordIndex = (wordIndex + 1) % words.length;
+            }
+          }
+          setTimeout(tick, TYPING_SPEED);
+        }
+      
+        tick();
+      </script>
+      
 
 </body>
 </html>
