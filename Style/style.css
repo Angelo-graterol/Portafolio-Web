@@ -9,9 +9,6 @@
 
     --sidebar-width: 250px;   
     --sidebar-padding: 1.5rem;
-
-
-
 }
 
 
@@ -31,9 +28,9 @@
     /*  */
     align-items: center; 
     gap: 2rem; 
-    /* padding: 1.5rem; */
+    padding: 1.5rem;
     /*  */
-    background-color: var(--color-principal);
+    background-color: var(--color-fondo-oscuro);
     color: var(--color-fondo-claro);
     /*  */
     overflow-y: auto;
@@ -49,7 +46,7 @@
     }
 
     .header__logo a img{
-      height: 100px;
+      height: 200px;
       border-radius: 100%;
     }
 
@@ -63,10 +60,14 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    background-color: var(--color-fondo-oscuro);
+    border-radius: 80px ;
+    padding: 9px;
+    width: 100%;
+    align-items: center;
   }
 
     .header-redes a{
-
     }
 
     .header-redes a img{
@@ -77,40 +78,151 @@
       border-radius: 100%;
     }
 
-  .header-navegador{
+  /* .header-navegador{
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
       margin-top: 30%;
       font-size: 1.5rem;
+      align-items: center;
+
   }
 
     .header-navegador a{
+      margin-top: 2px;
       padding: 3px;
       text-decoration: none;
       color: var(--color-fondo-oscuro);
       background-color: var(--color-texto-secundario);
       border: 3px solid var(--color-fondo-oscuro) ;
       border-radius: 38px;
-      
+      text-align: center;
+      justify-content: center;
+
+      width: 10em;
+      position: relative;
+      height: 3.5em;
+      border: 3px ridge var(--color-fondo-claro);
+      outline: none;
+      background-color: transparent;
+      color: white;
+      transition: 1s;
+      border-radius: 0.5em;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
     }
+
+    .header-navegador a::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 3%;
+      width: 95%;
+      height: 40%;
+      background-color: var(--color-principal);
+      transition: 0.5s;
+      transform-origin: center;
+    }
+    
+    .header-navegador a::before {
+      content: "";
+      transform-origin: center;
+      position: absolute;
+      top: 80%;
+      left: 3%;
+      width: 95%;
+      height: 40%;
+      background-color: var(--color-principal);
+      transition: 0.5s;
+    }
+    
+    .header-navegador a:hover::before, button:hover::after {
+      transform: scale(0)
+    }
+    
+    .header-navegador a:hover {
+      box-shadow: inset 0px 0px 25px var(--color-fondo-claro);
+    }
+      
+    
 
 
     .header-navegador a img{
-      height: 30px;
-      width: 30px;
-    }
+      margin-top:10px;
+      height: 24px;
+      width: 24px;
+    } */
 
-    .header-navegador a spam {
-      
-    }
+
+    .header-navegador {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem; /* Reducimos espacio entre items */
+      margin-top: 15%; /* Menos margen superior */
+      align-items: center;
+  }
+  
+  .header-navegador a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem; /* Espacio más ajustado entre icono y texto */
+      padding: 0.5em 1em; /* Padding más compacto */
+      width: 8em; /* Ancho reducido */
+      height: 2.8em; /* Altura reducida */
+      font-size: 18px; /* Texto más pequeño */
+      border: 2px solid var(--color-fondo-claro); /* Borde más delgado */
+      border-radius: 0.3em; /* Bordes menos redondeados */
+      transition: all 0.2s ease; /* Transición más rápida */
+  }
+  
+  /* Simplificamos el efecto hover */
+  .header-navegador a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.02);
+      box-shadow: none; /* Eliminamos el brillo interno */
+  }
+  
+  /* Optimizamos pseudo-elementos */
+  .header-navegador a::before,
+  .header-navegador a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px; /* Líneas más delgadas */
+      background-color: var(--color-principal);
+      opacity: 0.3;
+      transition: opacity 0.2s ease;
+  }
+  
+  .header-navegador a::before {
+      top: 0;
+  }
+  
+  .header-navegador a::after {
+      bottom: 0;
+  }
+  
+  .header-navegador a:hover::before,
+  .header-navegador a:hover::after {
+      opacity: 0; /* Solo desaparecen las líneas */
+  }
+  
+  /* Iconos más pequeños y ajustados */
+  .header-navegador a img {
+      width: 24px;
+      height: 24px;
+      margin-top: 0; /* Eliminamos margen superior */
+  }
+
 
 
 /* Seccion de Inicio */
   #Home {
     margin-left: var(--sidebar-width);
     height: 100vh;
-    background-image: url('/Images/logo.png');
+    background-image: url('/Images/fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -207,108 +319,156 @@
 
 
 /* Sección de Proyectos */
-  /* 1. Separación del sidebar y padding general */
+/* Sección de Proyectos */
 #Proyectos {
-  margin-left: var(--sidebar-width);
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem 4rem calc(250px + 1.5rem);
+  background: var(--color-fondo-claro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 2. Título centrándolo respecto al contenido */
-#Proyectos > h2 {
-  margin: 0 0 2rem 0;
-  font-size: 2rem;
-  text-align: left;
-}
-
-/* 3. Contenedor principal del carrusel */
 .carrusel {
+  max-width: 1200px;
+  width: 100%;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre elementos */
 }
 
-/* 4. Área “viewport” del carrusel */
 .carrusel-contenedor {
   overflow: hidden;
+  position: relative;
+  width: 400px; /* Ancho exacto de un proyecto */
+  height: 300px; /* Altura definida */
 }
 
-/* 5. Lista de slides con flex y transición */
 .carrusel-funcional {
   display: flex;
-  gap: 1rem;
+  transition: transform 0.5s ease;
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
-  transition: transform 0.5s ease;
+  width: 1600px; /* Ancho total para todos los proyectos */
+  will-change: transform; /* Mejora de rendimiento */
 }
 
-/* 6. Cada slide ocupa un tercio menos gaps */
 .carrusel-seccion {
-  flex: 0 0 calc((100% - 2rem) / 3);
+  flex: 0 0 400px; /* Ancho aumentado */
+  height: 300px; /* Altura aumentada */
+  border-radius: 12px; /* Bordes más redondeados */
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 7. Slide: imagen de fondo y altura fija */
+.carrusel-seccion:hover {
+  transform: scale(1.03); /* Efecto de hover sutil */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
 .carrusel-seccion-fondo {
   width: 100%;
-  height: 200px; /* ajusta a tu diseño */
+  height: 100%;
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
-  overflow: hidden;
+  position: relative;
+  filter: brightness(0.7); /* Oscurecimiento de fondo */
+  transition: filter 0.3s ease;
 }
 
-/* 8. Botón “Ver más” centrado sobre el slide */
+.carrusel-seccion:hover .carrusel-seccion-fondo {
+  filter: brightness(0.8);
+}
+
 .carrusel-seccion-información {
   position: absolute;
-  bottom: 1rem;
+  bottom: 30px; /* Posicionado hacia abajo */
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.5rem 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  background-color: var(--color-acento);
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-.carrusel-seccion-información:hover {
-  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* 9. Controles (anterior/siguiente) superpuestos */
+.carrusel-seccion-información:hover {
+  background-color: color-mix(in srgb, var(--color-acento) 90%, white);
+  transform: translateX(-50%) scale(1.05);
+}
+
 .control-carrusel {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  width: 50px;
+  height: 50px;
   border: none;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.3s ease;
 }
+
 .control-carrusel:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0.6);
 }
+
 .control-carrusel-back {
-  left: 0.5rem;
+  left: -70px;
 }
+
 .control-carrusel-next {
-  right: 0.5rem;
+  right: -70px;
 }
 
-/* 10. Responsividad: un slide en móvil */
+@media (max-width: 1200px) {
+  .control-carrusel-back {
+    left: 10px;
+  }
+
+  .control-carrusel-next {
+    right: 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  .carrusel-funcional {
-    gap: 0.5rem;
+  #Proyectos {
+    padding: 4rem 1rem;
   }
+
+  .carrusel-contenedor {
+    width: 300px;
+    height: 250px;
+  }
+
   .carrusel-seccion {
-    flex: 0 0 100%;
+    flex: 0 0 300px;
+    height: 250px;
+  }
+
+  .control-carrusel {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }
-
 
 
 
@@ -316,65 +476,132 @@
 /* Seccion de contacto */
 
   /* Evitamos solaparse con el sidebar */
+/* Sección de Contacto */
 #Contacto {
-  margin-left: var(--sidebar-width);
-  padding: 4rem 2rem;
+  padding: 4rem calc(250px + 1.5rem) 4rem 1.5rem;
+  background: var(--color-fondo-claro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 450px;
 }
 
-/* GRID PRINCIPAL: dos columnas en desktop, una en móvil */
 .contacto-grid {
   display: flex;
-  gap: 3rem;               /* espacio entre columnas */
-  align-items: flex-start; /* alinea arriba ambos bloques */
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
 }
 
-/* Móvil: apilar */
-@media (max-width: 768px) {
-  .contacto-grid {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-
-.informacion__contacto {
+#informacion-contacto {
   display: flex;
-  flex-direction: column;  /* columna de iconos */
-  gap: 1.5rem;             /* espacio entre iconos */
-  align-items: center;     /* centrar horizontalmente */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* Iconos redimensionados */
-.informacion__contacto a img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease;
+#informacion-contacto a {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.informacion__contacto a:hover img {
+
+#informacion-contacto a:hover {
+  opacity: 1;
   transform: scale(1.1);
 }
 
-.formulario .form {
-  background: none;        /* sin fondo, minimalista */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 600px;
+#informacion-contacto img {
+  width: 40px;
+  height: 40px;
 }
 
+.formulario {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-titulo {
+  text-align: center;
+  color: var(--color-texto-principal);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto-secundario);
+  font-size: 0.9rem;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
 
 .form__button {
-  align-self: start;       /* que no estire al 100% */
-  padding: 0.75rem 1.5rem;
-  background: transparent;
-  border: 2px solid #333;
-  border-radius: 4px;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .form__button:hover {
-  background: #333;
-  color: #fff;
+  background-color: color-mix(in srgb, var(--color-acento) 90%, white);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #Contacto {
+    padding: 4rem 1rem;
+  }
+
+  #informacion-contacto {
+    gap: 1rem;
+  }
+
+  #informacion-contacto img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .formulario {
+    padding: 1.5rem;
+  }
 }
 
 
@@ -383,7 +610,7 @@
 
 /* Separar del sidebar y dar padding */
 .footer {
-  margin-left: var(--sidebar-width);
+  margin-left: 300px;
   background-color: #f8f8f8;
   color: #333;
   padding: 2rem 2rem;
